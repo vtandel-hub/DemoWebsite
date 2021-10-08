@@ -1,0 +1,45 @@
+﻿@model Demo.Web.Models.CertificationResponse
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div>
+    <h5>Certification Details</h5>
+    <hr />
+    <dl class="row">        
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Code)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Code)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Cost)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Cost)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Prerequisite)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Prerequisite)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

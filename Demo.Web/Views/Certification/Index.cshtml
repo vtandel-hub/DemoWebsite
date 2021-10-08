@@ -1,0 +1,50 @@
+﻿@model List<Demo.Web.Models.CertificationResponse>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h5>List of certificates</h5>
+<hr />
+
+<div>
+    <table class="table table-hover">
+        <thead class="thead-light">
+            <tr height="40px">
+                <th>Code</th>
+                <th>Name</th>
+                <th>Cost</th>
+                <th>Description</th>
+                <th>Prerequisite</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var record in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => record.Code)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => record.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => record.Cost)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => record.Description)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => record.Prerequisite)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = record.Id }) | @Html.ActionLink("Details", "Details", new { id = record.Id })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<button class="btn btn-info"onclick="myFunction('Welcome to this AMAZING website!')">Try JS Function</button>
